@@ -14,9 +14,9 @@ HelloGUIWorld::HelloGUIWorld(QWidget *parent, Qt::WFlags flags)
 	ui.setupUi(this);
 }
 
+//Rotate the left/right image function
 void HelloGUIWorld::on_pushButton_clicked() {
 
-	//QPixmap pixmap(ui.leftImage->pixmap());
 	QPixmap pixmapLeft = *ui.leftImage->pixmap();
 	QPixmap pixmapRight = *ui.rightImage->pixmap();
 
@@ -37,7 +37,7 @@ void HelloGUIWorld::on_horizontalSlider_valueChanged() {
 	ui.label->setNum(sliderValue); //Changes the number on the Text-label to match the slider
 }
 
-//Load the left image
+//Load the left image function
 void HelloGUIWorld::on_leftImageLoadButton_clicked(){
 
     QFileDialog dialog(this); //Creates a File Selection Dialog
@@ -50,6 +50,7 @@ void HelloGUIWorld::on_leftImageLoadButton_clicked(){
 	ui.leftImage->setPixmap(fileName); //Change the left view
 }
 
+//Load the right image function
 void HelloGUIWorld::on_rightImageLoadButton_clicked(){
 
 	QFileDialog dialog(this); //Creates a File Selection Dialog
